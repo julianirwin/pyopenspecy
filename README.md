@@ -14,14 +14,24 @@
 
 # pyopenspecy
 
-> Add a short description here!
+> Quickly grab spectra from Open Specy through python!
 
-A longer description of your project goes here...
+`pyopenspecy` allows you to grab specific or random Raman and FTIR spectra from the Open Specy libraries.
+
+# Example
+
+Get a random spectrum
+
+     import pyopenspecy
+
+     spectrum, metadata = pyopenspecy.random_raman_spectrum()
 
 
-<!-- pyscaffold-notes -->
+Get a specific spectrum
 
-## Note
+     spectrum, metadata = pyopenspecy.raman_spectrum_by_id(801)
 
-This project has been set up using PyScaffold 4.3.1. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+
+Fuzzy search for a spectrum by sample material name.
+
+     pyopenspecy.fuzzy_search_raman("Fe O3", limit=10)

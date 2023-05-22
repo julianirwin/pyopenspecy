@@ -1,4 +1,0 @@
-autopep8
-deepmerge
-pytest
-pytest-cov
